@@ -1,0 +1,6 @@
+SELECT *
+FROM dbo.WorkItems
+WHERE EndDate < GETDATE()
+
+
+

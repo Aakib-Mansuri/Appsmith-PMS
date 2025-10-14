@@ -1,0 +1,3 @@
+SELECT *
+FROM dbo.WorkItems
+WHERE EndDate >= GETDATE() AND EndDate <= DATEADD(DAY, 14, GETDATE())

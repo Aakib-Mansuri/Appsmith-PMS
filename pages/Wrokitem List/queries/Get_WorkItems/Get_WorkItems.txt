@@ -1,0 +1,11 @@
+SELECT
+  *
+FROM
+  dbo.WorkItems
+ORDER BY
+  {{Workitems.sortOrder.column || 'ID'}} {{Workitems.sortOrder.order !== "asc" ? "DESC" : "ASC"}}
+OFFSET
+  {{Workitems.pageOffset}} ROWS
+FETCH NEXT
+  {{Workitems.pageSize}} ROWS ONLY
+	

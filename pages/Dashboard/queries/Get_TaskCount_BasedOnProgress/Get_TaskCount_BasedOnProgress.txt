@@ -1,0 +1,5 @@
+SELECT Progress AS x, COUNT(*) AS y
+FROM dbo.WorkItems
+where Progress is not null
+GROUP BY Progress
+ORDER BY Progress;

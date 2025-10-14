@@ -1,0 +1,3 @@
+UPDATE Workitems
+SET Assignee = '{{ this.params.Assignee }}'
+WHERE id = '{{ this.params.Id }}';

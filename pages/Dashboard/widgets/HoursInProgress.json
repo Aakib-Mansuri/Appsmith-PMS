@@ -1,0 +1,67 @@
+{
+  "backgroundColor": "#FFFFFF",
+  "borderColor": "#E0DEDE",
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "borderWidth": "1",
+  "bottomRow": 29,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "defaultModel": "{\n  \"count\": {{Get_InProgressEstimate.data[0].sum}}\n\n}",
+  "dynamicBindingPathList": [
+    {
+      "key": "theme"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
+    },
+    {
+      "key": "defaultModel"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicTriggerPathList": [
+    {
+      "key": "onResetClick"
+    }
+  ],
+  "events": [
+    "onResetClick"
+  ],
+  "isCanvas": false,
+  "isLoading": false,
+  "isSearchWildcard": true,
+  "isVisible": true,
+  "key": "2gzdhkzgh4",
+  "leftColumn": 10,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "mobileBottomRow": 49,
+  "mobileLeftColumn": 1,
+  "mobileRightColumn": 24,
+  "mobileTopRow": 19,
+  "needsErrorInfo": false,
+  "onResetClick": "{{showAlert('Successfully reset!!', '');}}",
+  "parentColumnSpace": 20.25,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "rightColumn": 21,
+  "srcDoc": {
+    "css": "#root {\n  height: 90vh;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n.task-card {\n  text-align: center;\n  transition: box-shadow 0.2s;\n}\n\n.task-card h1 {\n  font-size: 2em;\n  margin: 0 0 8px;\n  color: var(--appsmith-theme-primaryColor, #4850c7);\n  font-weight: 700;\n}\n\n.task-card p {\n  color: #888;\n  font-size: 1em;\n  margin: 0;\n  font-weight: 400;\n}",
+    "html": "<div id=\"root\"></div>",
+    "js": "import React from \"https://cdn.jsdelivr.net/npm/react@18.2.0/+esm\";\nimport ReactDOM from \"https://cdn.jsdelivr.net/npm/react-dom@18.2.0/+esm\";\nfunction TaskCard() {\n  // Get count from appsmith.model, fallback to 145\n  const [count, setCount] = React.useState(appsmith.model.count ?? 145);\n  React.useEffect(() => {\n    // Listen to model changes from Appsmith (dynamic updates)\n    appsmith.onModelChange((model, prevModel) => {\n      if (model.count !== prevModel?.count) {\n        setCount(model.count ?? 145);\n      }\n    });\n  }, []);\n  return /*#__PURE__*/React.createElement(\"div\", {\n    className: \"task-container-dashboard\"\n  }, /*#__PURE__*/React.createElement(\"div\", {\n    className: \"task-card\"\n  }, /*#__PURE__*/React.createElement(\"h1\", null, count), /*#__PURE__*/React.createElement(\"p\", null, \"Estimated Hours for In-Progress Tasks\")));\n}\nappsmith.onReady(() => {\n  ReactDOM.render(/*#__PURE__*/React.createElement(TaskCard, null), document.getElementById(\"root\"));\n});"
+  },
+  "theme": "{{appsmith.theme}}",
+  "topRow": 0,
+  "type": "CUSTOM_WIDGET",
+  "uncompiledSrcDoc": {
+    "css": "#root {\n\theight: 90vh;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n.task-card {\n\ttext-align: center;\n\ttransition: box-shadow 0.2s;\n}\n.task-card h1 {\n\tfont-size: 2em;\n\tmargin: 0 0 8px;\n\tcolor: var(--appsmith-theme-primaryColor, #4850c7);\n\tfont-weight: 700;\n}\n\n.task-card p {\n\tcolor: #888;\n\tfont-size: 1em;\n\tmargin: 0;\n\tfont-weight: 400;\n}",
+    "html": "<div id=\"root\"></div>",
+    "js": "import React from \"https://cdn.jsdelivr.net/npm/react@18.2.0/+esm\";\nimport ReactDOM from \"https://cdn.jsdelivr.net/npm/react-dom@18.2.0/+esm\";\n\nfunction TaskCard() {\n  // Get count from appsmith.model, fallback to 145\n  const [count, setCount] = React.useState(appsmith.model.count ?? 145);\n\n  React.useEffect(() => {\n    // Listen to model changes from Appsmith (dynamic updates)\n    appsmith.onModelChange((model, prevModel) => {\n      if (model.count !== prevModel?.count) {\n        setCount(model.count ?? 145);\n      }\n    });\n  }, []);\n\n  return (\n    <div className=\"task-container-dashboard\">\n      <div className=\"task-card\">\n        <h1>{count}</h1>\n        <p>Estimated Hours for In-Progress Tasks</p>\n      </div>\n    </div>\n  );\n}\n\nappsmith.onReady(() => {\n  ReactDOM.render(<TaskCard />, document.getElementById(\"root\"));\n});"
+  },
+  "version": 1,
+  "widgetId": "uurn69o0ep",
+  "widgetName": "HoursInProgress"
+}

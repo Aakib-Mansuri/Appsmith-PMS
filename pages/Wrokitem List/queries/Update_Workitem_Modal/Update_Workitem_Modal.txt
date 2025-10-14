@@ -1,0 +1,8 @@
+UPDATE dbo.WorkItems SET 
+Title= '{{ Edit_Title.text}}', 
+Description= '{{Edit_Description.text}}',
+Progress= {{Edit_Progress.selectedOptionValue}}, 
+Estimate= {{Edit_Estimates.text}}, 
+PlannedHours= {{Edit_PlannedHours.text}},
+Assignee= {{Edit_Assignee.selectedOptionValue}}
+WHERE ID= '{{Workitems.triggeredRow.ID}}';

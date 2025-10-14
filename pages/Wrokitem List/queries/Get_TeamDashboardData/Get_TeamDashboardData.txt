@@ -1,0 +1,6 @@
+EXEC SP_GetTeamDashboardData
+    @TenantId = 'a5e7d0d1-0e92-422f-a85c-9dac28375172',
+    @SquadId = '6e70edd6-1e81-420e-93a7-04c40b6c69cc',
+		@StartDate = '2025/09/01',
+		@EndDate = '2025/09/30';
+	

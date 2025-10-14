@@ -1,0 +1,10 @@
+UPDATE dbo.WorkItems SET 
+Title= '{{Workitems.updatedRow.Title}}', 
+Description= '{{Workitems.updatedRow.Description}}',
+StartDate= '{{Workitems.updatedRow.StartDate}}', 
+EndDate= '{{Workitems.updatedRow.EndDate}}', 
+Progress= {{Workitems.updatedRow.Progress}}, 
+Estimate= {{Workitems.updatedRow.Estimate}}, 
+PlannedHours= {{Workitems.updatedRow.PlannedHours}},
+Priority= {{Workitems.updatedRow.Priority}}
+WHERE ID= '{{Workitems.updatedRow.ID}}';

@@ -1,0 +1,1 @@
+SELECT FLOOR(SUM(Estimate)) as sum FROM dbo.WorkItems where Progress > 0

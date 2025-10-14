@@ -1,0 +1,10 @@
+INSERT INTO dbo.WorkItems (ID,ProjectID,Title,Description,Progress,Estimate,PlannedHours, ParentID) VALUES (
+	newid(),
+	'3ABA5DA2-114C-4E82-A64E-081CAFE402F3',
+	'{{Title.text}}',
+	'{{Description.text}}',
+	'{{Progress.selectedOptionValue}}',
+	{{Estimate.text}},
+	{{PlannedHours.text}},
+	null
+)
