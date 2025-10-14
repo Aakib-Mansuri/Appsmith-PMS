@@ -12,9 +12,16 @@
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "isVisible"
     }
   ],
-  "dynamicPropertyPathList": [],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isVisible"
+    }
+  ],
   "dynamicTriggerPathList": [
     {
       "key": "onClick"
@@ -23,7 +30,7 @@
   "isDefaultClickDisabled": true,
   "isDisabled": false,
   "isLoading": false,
-  "isVisible": true,
+  "isVisible": "{{ !appsmith.user.roles.includes('Employee') }}",
   "key": "10z0p8zkxs",
   "leftColumn": 13,
   "minWidth": 120,
