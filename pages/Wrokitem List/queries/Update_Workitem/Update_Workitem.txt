@@ -1,0 +1,14 @@
+{
+	"ScreenId":"36c3a545-27a7-41c2-820d-3a3e56f088e6",
+	"Data":{
+		Title: '{{this.params.Title}}', 
+		Description: '{{this.params.Description}}',
+		StartDate: '{{this.params.StartDate}}', 
+		EndDate: '{{this.params.EndDate}}', 
+		Progress: {{this.params.Progress}}, 
+		Estimate: {{this.params.Estimate}}, 
+		PlannedHours: {{this.params.PlannedHours}},
+		Priority: {{this.params.Priority}},
+		ID: '{{this.params.ID}}'
+	}
+}
