@@ -33,7 +33,7 @@
   "mobileRightColumn": 63,
   "mobileTopRow": 18,
   "needsErrorInfo": false,
-  "onClick": "{{Update_Workitem.run({\n  ID: Workitems.triggeredRow.ID,\n  Title: Edit_Title.text,\n  Description: Edit_Description.text,\n  Assignee: Edit_Assignee.selectedOptionValue,\n  Progress: Edit_Progress.selectedOptionValue,\n  Estimate: Edit_Estimates.text,\n  PlannedHours: Edit_PlannedHours.text\n}).then(() => {\n  SendEmail_UpdateWorkItem.run();\n  Get_WorkItems.run();\n  closeModal(Edit_Workitem.name);\n});}}",
+  "onClick": "{{Update_Workitem.run({\n  ID: Workitems.triggeredRow.ID,\n  Title: Edit_Title.text,\n  Description: Edit_Description.text,\n  Assignee: Edit_Assignee.selectedOptionValue,\n  Progress: Edit_Progress.selectedOptionValue,\n  Estimate: Edit_Estimates.text,\n  PlannedHours: Edit_PlannedHours.text\n}).then(() => {\n  SendEmail_UpdateWorkItem.run();\n  Get_WorkItems.run();\n  closeModal(Edit_Workitem.name);\n  showAlert('Workitem updated', 'success');\n});}}",
   "originalBottomRow": 29,
   "originalTopRow": 25,
   "parentId": "6ikfk67ty6",
