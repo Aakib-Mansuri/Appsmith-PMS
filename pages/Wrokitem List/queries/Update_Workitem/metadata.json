@@ -11,7 +11,7 @@
           "value": "text/plain"
         }
       ],
-      "body": "{\n\t\"ScreenId\":\"36c3a545-27a7-41c2-820d-3a3e56f088e6\",\n\t\"Data\":{\n\t\tTitle: '{{this.params.Title}}', \n\t\tDescription: '{{this.params.Description}}',\n\t\tStartDate: '{{this.params.StartDate}}', \n\t\tEndDate: '{{this.params.EndDate}}', \n\t\tProgress: {{this.params.Progress}}, \n\t\tEstimate: {{this.params.Estimate}}, \n\t\tPlannedHours: {{this.params.PlannedHours}},\n\t\tPriority: {{this.params.Priority}},\n\t\tID: '{{this.params.ID}}'\n\t}\n}",
+      "body": "{\n\t\"ScreenId\":\"36c3a545-27a7-41c2-820d-3a3e56f088e6\",\n\t\"Data\":{\n\t\tTitle: '{{this.params.Title}}', \n\t\tDescription: '{{this.params.Description}}',\n\t\tProgress: {{this.params.Progress}}, \n\t\tEstimate: {{this.params.Estimate}}, \n\t\tPlannedHours: {{this.params.PlannedHours}},\n\t\tAssignee: {{ this.params.Assignee }},\n\t\tID: '{{this.params.ID}}'\n\t}\n}",
       "bodyFormData": [],
       "encodeParamsToggle": true,
       "formData": {

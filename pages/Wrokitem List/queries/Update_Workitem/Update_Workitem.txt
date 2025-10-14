@@ -3,12 +3,10 @@
 	"Data":{
 		Title: '{{this.params.Title}}', 
 		Description: '{{this.params.Description}}',
-		StartDate: '{{this.params.StartDate}}', 
-		EndDate: '{{this.params.EndDate}}', 
 		Progress: {{this.params.Progress}}, 
 		Estimate: {{this.params.Estimate}}, 
 		PlannedHours: {{this.params.PlannedHours}},
-		Priority: {{this.params.Priority}},
+		Assignee: {{ this.params.Assignee }},
 		ID: '{{this.params.ID}}'
 	}
 }
