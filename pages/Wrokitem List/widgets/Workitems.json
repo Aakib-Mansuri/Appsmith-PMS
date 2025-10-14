@@ -203,6 +203,9 @@
     },
     {
       "key": "primaryColumns.Priority.onOptionChange"
+    },
+    {
+      "key": "tableData"
     }
   ],
   "dynamicTriggerPathList": [
