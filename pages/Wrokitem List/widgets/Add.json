@@ -30,7 +30,7 @@
   "mobileRightColumn": 3,
   "mobileTopRow": 1,
   "needsErrorInfo": false,
-  "onClick": "{{showModal(Add_Workitem.name);}}",
+  "onClick": "{{showModal(Add_Workitem.name).then(() => {});}}",
   "parentColumnSpace": 20.25,
   "parentId": "0",
   "parentRowSpace": 10,
